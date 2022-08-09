@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Custom Cursor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Developer Hub</h1>
+    <div id="cursor"></div>
+
+
+    <script>
+        let cursor = document.querySelector("#cursor");
+
+        document.addEventListener("mousemove", (event)=>{
+            let left = event.clientX;
+            let top = event.clientY;
+            cursor.style.top = top + "px";
+            cursor.style.left = left + "px";
+            cursor.style.opacity = "1";
+        });
+        document.addEventListener("mouseout", ()=>{
+            cursor.style.opacity = "0"
+        })
+    </script>
+</body>
+</html>
